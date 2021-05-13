@@ -236,4 +236,4 @@ a, b, c, *the_rest = myTuple
 print(a, b, c, the_rest)
 
 a, b, *the_rest, the_last = myTuple
-print(a, b, c, the_rest, the_last)
+print(a, b, c, the_rest, the_last) 
