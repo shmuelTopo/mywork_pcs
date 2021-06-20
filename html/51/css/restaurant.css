@@ -10,6 +10,7 @@ body {
   width: 80%;
   margin: auto;
 
+<<<<<<< HEAD
   /*padding: 1em 2em;*/
   /*tb rl*/
   /*padding: 1em 2em 3em;*/
@@ -18,6 +19,13 @@ body {
   /*padding-top padding-right etc..*/
   padding: 2em;
   /*all sides*/
+=======
+  /*padding: 1em 2em;*/ /*tb rl*/
+  /*padding: 1em 2em 3em;*/ /*t rl b*/
+  /*padding: 1em 2em 3em 4em;*/
+  /*padding-top padding-right etc..*/
+  padding: 2em; /*all sides*/
+>>>>>>> 126ef1c83a695e2f0c853171a4b15909e3a812d0
 }
 
 header {
@@ -78,8 +86,12 @@ a:active {
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 nav ul,
 nav li {
+=======
+nav ul, nav li {
+>>>>>>> 126ef1c83a695e2f0c853171a4b15909e3a812d0
   display: inline;
   padding: 0;
 }
