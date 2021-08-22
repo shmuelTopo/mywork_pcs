@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop</title>
+
+    <style>
+        #controlPanel {
+            border-radius: .5em;
+            padding: .5em;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 2fr;
+            background-color: rgb(255, 210, 152);
+            margin: auto;
+            width: 15em;
+            height: 120px;
+        }
+
+        body {
+            margin: 0;
+            padding: .2em;
+            background-color: beige;
+        }
+        #theButtonBox {
+            border-radius: .5em;
+            background-color: rgb(255, 255, 97);
+            width: 80%;
+            margin: auto;
+            border: 5px solid red;
+            margin-bottom: 1em;
+        }
+
+        button {
+            min-width: 4em;
+            padding: .5em;
+            margin: .2em;
+            border-radius: .3em;
+        }
+
+        #theButton {
+            color: rgb(255, 192, 211);
+            background-color: rgb(72, 111, 179);
+            font-weight: bold;
+            font-size: 2em;
+            padding: 0;
+            position: absolute;
+        }
+
+        #controlPanel div {
+            display: flex;
+            flex-direction: column;
+            grid-area: 4 / 1 / 5 / -1;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="theButtonBox">
+        <button id="theButton">Watch Me!</button>
+    </div>
+    <div id="controlPanel">
+        <button id="upLeft">↖</button>
+        <button id="upButton">↑</button>
+        <button id="upRight">↗</button>
+    
+        <button id="leftButton">←</button>
+        <button id="middleButton">Start</button>
+        <button id="rightButton">→</button>
+    
+        <button id="downLeft">↙</button>
+        <button id="downButton">↓</button>
+        <button id="downRight">↘</button>
+        
+    </div>
+
+    <script src="eventLoop.js"></script>
+</body>
+</html>
