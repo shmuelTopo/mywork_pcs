@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 2em;
+            display: grid;
+            gap: 2em;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        body>*{
+            grid-column: 1 / span 12;
+        }
+
+        @media screen and (min-width: 700px){
+            body {
+                background-color: yellow;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: space-around;
+            }
+            
+            aside {
+                grid-row: 3;
+                grid-column: 1 / span 2;  
+            }
+
+            article {
+                grid-row: 3;
+                grid-column: 3 / span 10;
+            }
+
+            .ad {
+                grid-row: 4;
+                grid-column: 1 / span 2;
+            }
+
+            footer {
+                grid-row: 4;
+                grid-column: 3 / span 10;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>header goes Here</header>
+    <nav>
+        <ul>
+            <li> <a href="#">Link 1</a></li>
+            <li> <a href="#">Link 2</a></li>
+            <li> <a href="#">Link 3</a></li>
+        </ul>
+
+        <article>
+            <h1>Main content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, labore saepe nulla cum tempore mollitia nihil modi temporibus fugit qui laboriosam impedit nobis cumque debitis dicta eveniet libero minus ab ad pariatur accusamus! Illum debitis aspernatur, modi repudiandae in quidem laboriosam amet nisi, consequuntur ex, perferendis facere tempore libero sit. Voluptatibus consequuntur neque reiciendis ipsa minus ab nesciunt ex itaque veritatis sed, voluptatum consectetur totam, explicabo cumque ducimus architecto. Eos dolor a eius tempora nobis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga inventore culpa aliquid quisquam, delectus dolore similique soluta magnam neque quam accusantium maiores obcaecati quae.
+            </p>
+        </article>
+        <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, amet tempora libero repellendus ea odit maiores asperiores? Qui molestias iure, odit nihil illo et quis!</aside>
+        <div class="ad"><p>ad goes here</p></div>
+        <footer>footer goes here</footer>
+    </nav>
+</body>
+</html>
