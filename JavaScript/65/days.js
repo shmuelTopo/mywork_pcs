@@ -1,5 +1,5 @@
-
-window.app = (function(module) {
+window.app = window.app || {};
+window.app.utils = (function(module) {
     'use strict';
 
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wendesday', 'Thursday', 'Friday', 'Saturday'];
@@ -14,8 +14,5 @@ window.app = (function(module) {
     };
 
     return module;
-}(window.app || {}));
+}(window.app.utils || {}));
 
-
-console.log(window.app.getDayIndex('tuesday'));
-console.log(window.app.getDay(3));

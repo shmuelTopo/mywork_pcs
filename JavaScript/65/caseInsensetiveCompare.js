@@ -1,8 +1,8 @@
-window.app = (function (module) {
+window.app = window.app || {};
+window.app.utils = (function (module, theAlert) {
     'use strict';
-    module.caseInsensetiveCompare = (a, b) => a.toLowerCase() === b.toLowerCase()
+    module.caseInsensetiveCompare = (a, b) => a.toLowerCase() === b.toLowerCase();
+    module.nodify = (msg) => theAlert(msg);
     return module;
-}(window.app || {}));
+}(window.app.utils || {}, (m) => console.error(m)));
 
-
-console.log("'JOE', 'joe' -->", window.app.caseInsensetiveCompare('JOe', 'joe'));
