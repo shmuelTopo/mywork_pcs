@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover {
+            background-color: yellow !important;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="joe">Joe Biden</h1>
+    <h1 id="kamala">Kamala Harris</h1>
+
+    <hr>
+    <input id="name" style="background-color: lightgreen;">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    
+    <script>
+
+        /*(function($){
+            const....
+
+        })(jQuery);*/
+
+        const joe = $('#joe')
+                .css('color', 'pink')
+                .click(() => {
+                    console.log('Joe was clicked');
+                    joe.hide();
+                    setTimeout(() => joe.show(), 1000);
+                })
+
+            const kamala = $('#kamala');
+            kamala.css('color', 'yellow');
+            console.log(kamala.css('color'));
+
+            kamala.click(() => console.log('Kamala was clicked'));
+
+            const theH1s = $('h1').css('backgroundColor', 'black');
+            console.log(theH1s);
+
+            console.log($('h1').get());
+
+            //$('#name').change(event => console.log($('#name').val()));
+
+            //Very inaficiient way of changeing backghroud-color on hover
+            const theNameElem = $('#name');
+            theNameElem.change(event => console.log(event.target.value))
+                //.mouseenter(() => theNameElem.css('background-color', 'yellow'))
+                //.mouseleave(() => theNameElem.css('background-color', 'white'));
+                //.mouseenter(() => theNameElem.addClass('hover'))
+                //.mouseleave(() => theNameElem.removeClass('hover'));
+                .hover(() => theNameElem.addClass('hover'), () => theNameElem.removeClass('hover'));
+        
+            theH1s.click(function(){
+                //$(this).append('<button>Click me!</button')
+                    // .click(() => console.log('button was clicked'));
+
+                $('<button> Click me!</button>')
+                    .appendTo($(this))
+                    .click((event) => {
+                        console.log('button was clicked');
+                        event.stopPropagation();
+                    })
+            });
+    </script>
+</body>
+</html>

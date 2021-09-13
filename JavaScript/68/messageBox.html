@@ -7,14 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" id="messageText">
+    <button id="show">Show</button>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error commodi harum suscipit id excepturi, alias, enim tenetur placeat labore illum aperiam necessitatibus, similique quas saepe et illo ea dicta repellat animi voluptatibus! Incidunt beatae adipisci quam voluptatibus autem libero commodi ut praesentium quisquam, voluptas recusandae sint unde. Mollitia sed in optio ex, quaerat aliquam, neque aperiam harum dicta amet dolore tenetur ea sapiente maiores! Totam porro perspiciatis dolorum nesciunt! Laudantium dicta qui nulla distinctio, consequuntur ratione quis dolore, omnis recusandae dolores aperiam eaque provident minima! Architecto, fugiat dolores voluptatibus aliquid neque nam sapiente itaque, maiores libero, minima mollitia iure ea aperiam aut ducimus ipsam ratione repellendus saepe quas obcaecati numquam. In, enim. Ab at totam necessitatibus officia atque? Dolores fugit explicabo soluta tempora laborum ipsum dolor excepturi minus qui porro nobis, saepe perferendis? Consequuntur aliquam id dignissimos hic odit debitis nobis natus, temporibus quasi facere iste vitae provident amet asperiores voluptatem veritatis neque quisquam molestiae minima sit? Animi necessitatibus dolore ipsam natus voluptas, nulla repellat itaque soluta voluptatum minus excepturi rerum perferendis pariatur dolor, quaerat molestiae, omnis deleniti quae harum iste! Cupiditate aspernatur nihil quis voluptates ipsum doloremque illo perferendis quasi accusantium ad neque nisi, ea voluptatum? In consequuntur atque praesentium, tempore, deleniti ducimus commodi reprehenderit placeat dignissimos laudantium, a rerum? Impedit ducimus corrupti aspernatur unde molestiae nihil temporibus doloremque quidem facere quibusdam amet dolores rem quam aperiam maxime mollitia, vitae asperiores dolore necessitatibus! Atque provident, velit quae aliquid eius facere debitis ab voluptas, incidunt commodi magnam molestiae minus nesciunt!</p>
 
 
     <script src="messageBox.js"></script>
     <script>
-        
-        messageBox('Hello');
+        pcs.messageBox.show('Hello World!');
+
+        const messageText = document.getElementById('messageText');
+        document.getElementById('show').addEventListener('click', () => {
+            pcs.messageBox.show(messageText.value);
+            //messageText.value = '';
+        });
     </script>
     
 </body>
-</html>
+</htm
