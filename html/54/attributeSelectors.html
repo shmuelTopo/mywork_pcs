@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin-left: 2em;
+            list-style-type: none;
+        }
+
+        .word {
+            list-style-type: url("images/word.png");
+        }
+
+        .pdf {
+            list-style-type: url("images/pdf.png");
+        }
+
+        a {
+            background-repeat: no-repeat;
+            padding: 3em 5em;
+            display: inline-block;
+        }
+
+        /* a[href*=".doc"] {
+            background-image: url(images/word.png);
+        } */
+
+ 
+        /*start with
+        a[href^="my"] {
+            background-image: url(images/word.png);
+        }*/
+
+        /* end with*/
+        a[href$=".doc"] {
+            background-image: url(images/word.png);
+        }
+
+        a[href$=".pdf"] {
+            background-image: url(images/pdf.png);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Atrtribute Selectors</h1>
+    <ul>
+        <li><a href="myDocument1.doc">myDocument1.doc</a></li>
+        <li>myOtherDocument.docx</li>
+        <li>myPresentation.pdf</li>
+    </ul>
+
+    <h2 pcs="5">Pcs Selectors</h2>
+</body>
+</html>
